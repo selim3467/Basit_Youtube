@@ -1,0 +1,265 @@
+
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#0F0F0F;
+    
+}
+
+/* header start */
+header{          
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #0F0F0F;
+}
+
+.fa-youtube{
+    font-size: 24px;    
+}
+
+.header-wrapper{
+    height: 60px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+    position: relative;
+    top: -1000px;
+    animation: header-wrapper 1s ease-in-out forwards ;  
+    border-bottom: 1px solid red; 
+}
+
+@keyframes header-wrapper{
+    to{
+        top:0;
+    }
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+header i{
+    font-size: 24px;
+    color: white;
+}
+
+.header-left h3{
+    font-size: 24px;
+    color: #FF0000;
+    margin-left: 20px;
+}
+
+.header-center{
+    display: flex;
+    align-items: center;
+}
+
+.header-search input{
+    background-color: #0F0F0F;
+    border: none;
+    outline: none;
+    color: white;
+    margin-right: 250px;
+}
+
+.header-search{
+    border: 1px solid #717171;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.header-search .fa-magnifying-glass{
+    font-size: 18px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-center .fa-microphone{
+    background-color: #909090;
+    margin-left: 10px;
+    font-size: 17px;
+    padding: 9px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    
+}
+
+.header-right .fa-bell{
+    position: relative;
+}
+
+.header-right .fa-bell::after{   
+    position: absolute;
+    background: red;
+    content: "1";
+    padding: 3px 3px;
+    font-size: 10px;
+    border-radius: 50%;
+    top: -10px;
+    left: 12px;
+    align-items: center;
+}
+
+.header-right .avatar{
+    width: 32px;
+    height: 32px;
+    
+}
+
+.header-right .avatar img{
+    width: 100%;
+    border-radius: 50px;
+}
+
+/* header end */
+.Content{
+    display: flex;
+   
+}
+
+/* sidebar start */
+.sidebar{
+    height: 100vh;
+    border-right:1px solid #FF0000;
+    width: 120px;
+    padding-top: 70px;
+    position: fixed;
+    z-index: 2;
+    background-color: #0F0F0F;
+    transform: translateX(-200px);
+    animation: sidebar 1s ease-in-out forwards;
+}
+
+@keyframes sidebar{
+    to{
+        transform: translateX(0);
+    }
+
+}
+
+.sidebar-item{
+    margin-top: 15px;
+}
+
+.sidebar-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.7s;
+}
+
+.sidebar-item a:hover{
+    color: red;
+}
+
+.sidebar-item span{
+    font-size: 12px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.sidebar i{
+    font-size: 20px;
+}
+
+/* sidebar end */
+
+
+/* videos start */
+.videos{
+    margin:20px;
+    margin-left: 130px;
+    cursor: pointer;
+    
+}
+
+.video-list{
+    color:white;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+    column-gap: 50px;
+    row-gap: 50px;
+    margin-top: 100px;
+    position: relative;
+    top: -1000px;
+    animation: video-list 1s ease-in-out forwards ;  
+}
+
+@keyframes video-list{
+    to{
+        top:0;
+    }
+}
+
+.video-list-item:hover{
+   transform: scale(1.1);
+}
+
+.video-list-item{
+    transition: .5s;
+}
+
+.video-image{
+    position: relative;
+    display: flex;
+}
+
+.video-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.video-image span{
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    padding: 0 4px;
+    background-color: #0F0F0F;    
+}
+
+.video-texts{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-texts a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 3px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.avatar img{
+    cursor: pointer;
+}
+
+
+@media (max-width:768px) {
+    .sidebar{
+        display: none;
+    }
+    .videos{
+        margin-left: 20px;
+    }
+}
